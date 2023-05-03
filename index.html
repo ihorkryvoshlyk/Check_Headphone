@@ -37,6 +37,10 @@
     button.addEventListener("click", () => {
       console.log(headphonesConnected);
       if (audio.paused) {
+        if (!headphonesConnected) {
+          alert("Please connect Your HeadPhone.");
+          return;
+        }
         audio.play();
         return;
       }
