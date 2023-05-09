@@ -18,6 +18,7 @@
 
     const updateDevices = () => {
       navigator.mediaDevices.enumerateDevices().then(function (devices) {
+        console.log(devices);
         // check to see if we have any device with "head" in its name connected
         // like "headset" or "headphones"
         headphonesConnected = Boolean(
